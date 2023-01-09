@@ -19,6 +19,7 @@ class Group:
             self.bri = kwargs['action'].get('bri', None)
             self.hue = kwargs['action'].get('hue', None)
             self.sat = kwargs['action'].get('sat', None)
+            self.lights = kwargs.get('lights', [])
 
     def _put(self, body):
         response = self.sdk.put(uri=f'/{self.sdk.username}/groups/{self.id_}', body=json.dumps(body))
