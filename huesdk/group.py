@@ -13,6 +13,8 @@ class Group:
         self.id_ = group_id
 
         self.name = kwargs.get('name', None)
+        
+        self.lights = []
 
         if 'action' in kwargs:
             self.is_on = kwargs['action'].get('on', False)
